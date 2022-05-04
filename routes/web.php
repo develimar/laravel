@@ -40,17 +40,17 @@ Route::get('/', function () {
 //})->where('categoria_id','[0-9]+')->where('nome','[A-Za-z]+');
 
 
-Route::get('/', 'PrincipalController@Principal');
-Route::get('/sobre-nos', 'SobreNosController@sobreNos');
-Route::get('/contato', 'ContatoController@Contato');
-Route::get('/login', function (){return 'Login';});
+Route::get('/', 'PrincipalController@Principal')->name('site.index');
+Route::get('/sobre-nos', 'SobreNosController@sobreNos')->name('site.sobrenos');
+Route::get('/contato', 'ContatoController@Contato')->name('site.contato');
+Route::get('/login', function (){return 'Login';})->name('site.login');
 
 // Agrupar as rotas /app
 
 Route::prefix('/app')->group(function (){
-    Route::get('/clientes', function (){return 'Clientes';});
-    Route::get('/fornecedores', function (){return 'Fornecedores';});
-    Route::get('/produtos', function (){return 'Produtos';});
+    Route::get('/clientes', function (){return 'Clientes';})->name('app.clientes');
+    Route::get('/fornecedores', function (){return 'Fornecedores';})->name('app.fornecedores');
+    Route::get('/produtos', function (){return 'Produtos';})->name('app.produtos');
 });
 
 
