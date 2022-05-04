@@ -13,6 +13,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* verbo http
+
+get
+post
+put
+patch
+delete
+options
+
+*/
+
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return 'Ola seja bem vindo ao curso';
 });
+
+Route::get('/sobre-nos', function () {
+    return 'Sobre nos';
+});
+
+Route::get('/contato', function () {
+    return 'Contato';
+});
+
+
