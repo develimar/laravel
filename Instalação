@@ -1,0 +1,8 @@
+Passos ao fazer o git clone
+
+1º Execute o composer install
+2º Copiei o .env.example e renomei para .env
+3º Execute o php artisan key:generate
+
+
+Teste com o php artisan serve
