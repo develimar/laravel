@@ -2,17 +2,15 @@
 
 {{--@dd($fornecedores)--}}
 
-
+@isset($fornecedores)
 Fornecedor:{{ $fornecedores[0]['nome'] }}
 <br>
 Status: {{ $fornecedores[0]['status'] }}
 <br>
-@if($fornecedores[0]['status'] == 'N')
-    Fornecedor Inativo
-@else
-    Fornecedor Ativo
-@endif
+@isset($fornecedores[0]['cnpj'] )
+CNPJ: {{ $fornecedores[0]['cnpj'] }}
+@endisset
+<br>
+@endisset
 
-@unless($fornecedores[0]['status'] == 'N')
-    Fornecedor Inativo
-@endunless
+
