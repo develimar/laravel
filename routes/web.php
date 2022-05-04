@@ -25,17 +25,15 @@ options
 */
 
 
-
+/*
 Route::get('/', function () {
     return 'Ola seja bem vindo ao curso';
 });
+*/
 
-Route::get('/sobre-nos', function () {
-    return 'Sobre nos';
-});
 
-Route::get('/contato', function () {
-    return 'Contato';
-});
+Route::get('/', 'PrincipalController@Principal');
+Route::get('/sobre-nos', 'SobreNosController@sobreNos');
+Route::get('/contato', 'ContatoController@Contato');
 
 
