@@ -43,10 +43,15 @@ Route::get('/', function () {
 Route::get('/', 'PrincipalController@Principal');
 Route::get('/sobre-nos', 'SobreNosController@sobreNos');
 Route::get('/contato', 'ContatoController@Contato');
-
 Route::get('/login', function (){return 'Login';});
-Route::get('/clientes', function (){return 'Clientes';});
-Route::get('/fornecedores', function (){return 'Fornecedores';});
-Route::get('/produtos', function (){return 'Produtos';});
+
+// Agrupar as rotas /app
+
+Route::prefix('/app')->group(function (){
+    Route::get('/clientes', function (){return 'Clientes';});
+    Route::get('/fornecedores', function (){return 'Fornecedores';});
+    Route::get('/produtos', function (){return 'Produtos';});
+});
+
 
 
