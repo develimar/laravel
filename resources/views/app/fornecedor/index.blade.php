@@ -4,18 +4,17 @@
 
     @isset($fornecedores)
 
-        @php $i = 0 @endphp
-        @while(isset($fornecedores[$i]))
-        Fornecedor:{{ $fornecedores[$i]['nome'] }}
+        @foreach($fornecedores as $indice => $fornecedor)
+        Fornecedor:{{ $fornecedor['nome'] }}
         <br>
-        Status: {{ $fornecedores[$i]['status'] }}
+        Status: {{ $fornecedor['status'] }}
         <br>
-        CNPJ: {{ $fornecedores[$i]['cnpj'] ?? 'Dado não foi preenchido.'}}
+        CNPJ: {{ $fornecedor['cnpj'] ?? 'Dado não foi preenchido.'}}
         <br>
-        Telefone: ({{ $fornecedores[$i]['ddd'] ?? ''}}){{ $fornecedores[$i]['telefone'] ?? ''}}
+        Telefone: ({{ $fornecedor['ddd'] ?? ''}}){{ $fornecedor['telefone'] ?? ''}}
         <br>
         Cidade:
-        @switch($fornecedores[$i]['ddd'])
+        @switch( $fornecedor['ddd'])
             @case ('11')
                 São paulo
                 @break
@@ -29,10 +28,7 @@
                 Estado não identificado.
         @endswitch
         <hr>
-            @php $i++ @endphp
-        @endwhile
-
-
+        @endforeach
 
     @endisset
 
