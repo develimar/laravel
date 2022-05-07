@@ -8,6 +8,9 @@ class SobreNosController extends Controller
 {
     public function sobreNos()
     {
-        return view('site.sobre-nos');
+        $parametros = [
+            'titulo' => 'Sobre Nós',
+        ];
+        return view('site.sobre-nos', $parametros);
     }
 }

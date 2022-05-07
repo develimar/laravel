@@ -8,6 +8,9 @@ class ContatoController extends Controller
 {
     public function Contato()
     {
-        return view('site.contato');
+        $parametros = [
+            'titulo' => 'Contato',
+        ];
+        return view('site.contato', $parametros);
     }
 }
