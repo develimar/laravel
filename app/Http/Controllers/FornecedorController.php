@@ -20,13 +20,6 @@ class FornecedorController extends Controller
             ]
         ];
 
-        //condicao ? se verdadeiro : se falso ;
-        //condicao ? se verdadeiro : (condicao ? se verdadeiro : se falso) ;
-
-        $msg = isset($fornecedores[1]['cnpj'])? 'CNPJ Informado' : 'CNPJ não informado';
-
-
-
-        return view('app.fornecedor.index', compact('fornecedores', 'msg' ));
+        return view('app.fornecedor.index', compact('fornecedores'));
     }
 }
