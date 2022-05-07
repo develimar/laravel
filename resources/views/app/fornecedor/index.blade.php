@@ -11,9 +11,11 @@
 
         CNPJ: {{ $fornecedores[0]['cnpj'] }}
         @empty($fornecedores[0]['cnpj'])
-            Vazio
+
         @endempty
     @endisset
     <br>
 @endisset
+
+{{ $msg }}
 
