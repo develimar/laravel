@@ -19,6 +19,9 @@ class FornecedorController extends Controller
                 'status' => 'N',
             ]
         ];
-        return view('app.fornecedor.index', compact('fornecedores'));
+
+        $teste = 0;
+
+        return view('app.fornecedor.index', compact('fornecedores', 'teste'));
     }
 }
