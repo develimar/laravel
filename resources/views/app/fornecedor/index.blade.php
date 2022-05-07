@@ -4,7 +4,8 @@
 
     @isset($fornecedores)
 
-        @for($i = 0; isset($fornecedores[$i]); $i++)
+        @php $i = 0 @endphp
+        @while(isset($fornecedores[$i]))
         Fornecedor:{{ $fornecedores[$i]['nome'] }}
         <br>
         Status: {{ $fornecedores[$i]['status'] }}
@@ -28,8 +29,10 @@
                 Estado não identificado.
         @endswitch
         <hr>
+            @php $i++ @endphp
+        @endwhile
 
-        @endfor
+
 
     @endisset
 
