@@ -8,8 +8,6 @@ class ContatoController extends Controller
 {
     public function Contato()
     {
-
-
         $parametros = [
             'titulo' => 'Contato',
         ];
