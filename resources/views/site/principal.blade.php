@@ -2,7 +2,6 @@
 @section('titulo', $titulo)
 @section('conteudo')
 <div class="conteudo-destaque">
-
     <div class="esquerda">
         <div class="informacoes">
             <h1>Sistema Super Gestão</h1>

@@ -8,9 +8,13 @@ class ContatoController extends Controller
 {
     public function Contato()
     {
+
+
         $parametros = [
             'titulo' => 'Contato',
         ];
+
+        var_dump($_GET);
         return view('site.contato', $parametros);
     }
 }
