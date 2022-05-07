@@ -12,7 +12,7 @@ class ContatoController extends Controller
             'titulo' => 'Contato',
         ];
 
-//        var_dump($_POST);
+        var_dump($_POST);
         return view('site.contato', $parametros);
     }
 }

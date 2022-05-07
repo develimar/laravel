@@ -11,6 +11,8 @@ class PrincipalController extends Controller
         $parametros = [
           'titulo' => 'Home',
         ];
+        echo 'Pagina Principal';
+        var_dump($_POST);
         return view('site.principal', $parametros);
     }
 }

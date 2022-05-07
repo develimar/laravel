@@ -41,6 +41,7 @@ Route::get('/', function () {
 
 
 Route::get('/', 'PrincipalController@Principal')->name('site.index');
+Route::post('/', 'PrincipalController@Principal')->name('site.index');
 Route::get('/sobre-nos', 'SobreNosController@sobreNos')->name('site.sobrenos');
 Route::get('/contato', 'ContatoController@Contato')->name('site.contato');
 Route::post('/contato', 'ContatoController@Contato')->name('site.contato');

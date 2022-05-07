@@ -9,7 +9,7 @@
 
     <div class="informacao-pagina">
         <div class="contato-principal">
-            @component('site.layouts._components.form_contato', ['classe' => 'borda-preta'])
+            @component('site.layouts._components.form_contato', ['classe' => 'borda-preta', 'rota' => 'site.contato'])
                 <p>A nossa equipe analizara a sua mensagem e retornaremos o mais brevemento possivel</p>
                 <p>Nosso tempo medio de resposta é de 48 horas</p>
             @endcomponent
@@ -19,6 +19,5 @@
 
 @include('site.layouts._partials.rodape')
 @endsection
-
 
 
