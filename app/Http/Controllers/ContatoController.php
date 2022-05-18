@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ContatoController extends Controller
 {
-    public function Contato()
+    public function contato()
     {
         $parametros = [
             'titulo' => 'Contato',
