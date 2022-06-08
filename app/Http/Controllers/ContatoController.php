@@ -44,7 +44,7 @@ class ContatoController extends Controller
             'telefone' => 'required',
             'email' => 'required',
             'motivo_contato' => 'required',
-            'mensagem' => 'required'
+            'mensagem' => 'required|max:200'
         ]);
         //gravar no banco
         //SiteContato::create($request->all());
