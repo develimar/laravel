@@ -17,6 +17,8 @@
     </div>
 </div>
 
+{{ print_r($motivo_contatos) }}
+
 @include('site.layouts._partials.rodape')
 @endsection
 
